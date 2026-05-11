@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toomics Global 마케팅 주간 리포트 | 2026년 5월 2주차</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f8f9fc; --bg2:#ffffff; --bg3:#f1f3f8; --bg4:#e8ebf2;
+  --border:#e0e4ef; --border2:#d0d5e8;
+  --accent:#3b6ef0; --accent2:#e07840; --accent3:#7c5cdb;
+  --green:#059669; --red:#dc2626; --yellow:#d97706;
+  --text:#1a1f36; --text2:#4a5270; --text3:#8893b0;
+  --jp:#dc2626; --tw:#d97706; --th:#059669; --kr:#7c5cdb;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans KR',sans-serif;font-size:14px;line-height:1.6;}
+
+/* ── HEADER ── */
+.header{background:linear-gradient(160deg,#eef1fb 0%,#f5f7ff 60%,#eef1fb 100%);border-bottom:1px solid var(--border);padding:28px 48px 24px;position:relative;overflow:hidden;}
+.header::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(59,111,240,.06) 0%,transparent 70%);pointer-events:none;}
+.header-row1{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+.brand{display:flex;align-items:center;gap:10px;}
+.pulse{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 10px var(--accent);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4;transform:scale(1.4)}}
+.brand-txt{font-family:'Space Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:.18em;text-transform:uppercase;}
+.header-badges{display:flex;gap:8px;}
+.hbadge{font-family:'Space Mono',monospace;font-size:9px;padding:3px 10px;border-radius:3px;letter-spacing:.08em;}
+.hbadge-blue{background:rgba(91,141,246,.12);border:1px solid rgba(91,141,246,.3);color:var(--accent);}
+.hbadge-green{background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.3);color:var(--green);}
+.header-title{font-size:26px;font-weight:700;color:var(--text);margin-bottom:8px;}
+.header-meta{display:flex;gap:20px;font-size:12px;color:var(--text2);}
+
+/* ── NAV ── */
+.nav{background:#ffffff;border-bottom:1px solid var(--border);padding:0 48px;display:flex;overflow-x:auto;gap:0;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,0.06);}
+.nav a{display:block;padding:13px 18px;color:var(--text3);font-size:12px;font-weight:500;text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s;}
+.nav a:hover{color:var(--text2);}
+.nav a.active{color:var(--accent);border-bottom-color:var(--accent);}
+
+/* ── MAIN ── */
+.main{padding:28px 48px;max-width:1440px;}
+
+/* ── SECTION LABEL ── */
+.sec-label{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--text3);margin-bottom:14px;display:flex;align-items:center;gap:10px;margin-top:36px;}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--border);}
+.sec-label:first-child{margin-top:0;}
+
+/* ── KPI CARDS ── */
+.kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:10px;}
+.kpi-row-4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px;}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:7px;padding:18px 16px;position:relative;overflow:hidden;transition:border-color .2s;}
+.kcard:hover{border-color:rgba(91,141,246,.35);}
+.kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);opacity:.5;}
+.kcard.g::before{background:var(--green);}
+.kcard.r::before{background:var(--red);}
+.kcard.y::before{background:var(--yellow);}
+.kcard.p::before{background:var(--accent3);}
+.klabel{font-size:10px;color:var(--text3);letter-spacing:.03em;margin-bottom:6px;font-weight:500;}
+.kval{font-family:'Space Mono',monospace;font-size:20px;font-weight:700;color:var(--text);line-height:1;margin-bottom:6px;}
+.ksub{font-size:10px;color:var(--text3);}
+.kdelta{display:inline-flex;align-items:center;gap:2px;font-family:'Space Mono',monospace;font-size:10px;padding:2px 6px;border-radius:3px;margin-top:5px;}
+.kdelta.up{background:rgba(14,158,104,.12);color:var(--green);}
+.kdelta.dn{background:rgba(217,65,65,.12);color:var(--red);}
+.kdelta.nt{background:rgba(196,127,0,.12);color:var(--yellow);}
+
+/* ── GRID LAYOUTS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:14px;}
+.g31{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-bottom:14px;}
+.g13{display:grid;grid-template-columns:1fr 2fr;gap:14px;margin-bottom:14px;}
+
+/* ── CARD ── */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:7px;padding:20px;}
+.card-title{font-size:13px;font-weight:700;color:var(--text);display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;}
+.card-sub{font-size:11px;color:var(--text3);margin-bottom:16px;}
+
+/* ── BADGE ── */
+.badge{font-family:'Space Mono',monospace;font-size:9px;padding:2px 7px;border-radius:3px;letter-spacing:.07em;}
+.b-blue{background:rgba(59,111,240,.1);border:1px solid rgba(59,111,240,.3);color:var(--accent);}
+.b-orange{background:rgba(212,113,26,.1);border:1px solid rgba(212,113,26,.3);color:var(--accent2);}
+.b-green{background:rgba(14,158,104,.1);border:1px solid rgba(14,158,104,.3);color:var(--green);}
+.b-red{background:rgba(217,65,65,.1);border:1px solid rgba(217,65,65,.3);color:var(--red);}
+.b-purple{background:rgba(124,92,219,.1);border:1px solid rgba(124,92,219,.3);color:var(--accent3);}
+.b-yellow{background:rgba(196,127,0,.1);border:1px solid rgba(196,127,0,.3);color:var(--yellow);}
+
+/* ── TABLE ── */
+.tbl{width:100%;border-collapse:collapse;}
+.tbl th{font-family:'Space Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;padding:7px 10px;text-align:right;border-bottom:1px solid var(--border);}
+.tbl th:first-child{text-align:left;}
+.tbl td{padding:9px 10px;font-size:12px;color:var(--text2);text-align:right;border-bottom:1px solid rgba(37,42,58,.6);font-family:'Space Mono',monospace;}
+.tbl td:first-child{text-align:left;font-family:'Noto Sans KR',sans-serif;color:var(--text);font-weight:500;font-size:12px;}
+.tbl tr:last-child td{border-bottom:none;}
+.tbl tr:hover td{background:rgba(255,255,255,.02);}
+.up{color:var(--green);}
+.dn{color:var(--red);}
+.nt{color:var(--yellow);}
+
+/* ── MARKET TAG ── */
+.mtag{display:inline-block;padding:1px 7px;border-radius:3px;font-family:'Space Mono',monospace;font-size:9px;font-weight:700;}
+.mtag-jp{background:rgba(248,113,113,.15);color:var(--jp);border:1px solid rgba(248,113,113,.3);}
+.mtag-tw{background:rgba(251,191,36,.15);color:var(--tw);border:1px solid rgba(251,191,36,.3);}
+.mtag-th{background:rgba(52,211,153,.15);color:var(--th);border:1px solid rgba(52,211,153,.3);}
+.mtag-kr{background:rgba(167,139,250,.15);color:var(--kr);border:1px solid rgba(167,139,250,.3);}
+
+/* ── PROGRESS BAR ── */
+.prog-wrap{margin-bottom:14px;}
+.prog-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;}
+.prog-label{font-size:12px;color:var(--text2);}
+.prog-val{font-family:'Space Mono',monospace;font-size:12px;}
+.prog-sub{font-size:10px;color:var(--text3);margin-bottom:5px;}
+.prog-track{height:5px;background:var(--bg4);border-radius:3px;overflow:hidden;position:relative;}
+.prog-fill{height:100%;border-radius:3px;transition:width .8s ease;}
+.prog-target{position:absolute;top:-2px;width:2px;height:9px;background:rgba(255,255,255,.3);border-radius:1px;}
+
+/* ── INSIGHT ── */
+.ins-list{display:flex;flex-direction:column;gap:10px;}
+.ins{display:flex;gap:10px;padding:13px;background:#f5f7ff;border-radius:6px;border-left:3px solid var(--border2);}
+.ins.warn{border-left-color:var(--yellow);}
+.ins.good{border-left-color:var(--green);}
+.ins.bad{border-left-color:var(--red);}
+.ins.info{border-left-color:var(--accent);}
+.ins-icon{font-size:15px;flex-shrink:0;margin-top:1px;}
+.ins-title{font-size:12px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.ins-desc{font-size:11px;color:var(--text2);line-height:1.55;}
+
+/* ── STRATEGY TABLE ── */
+.stbl{width:100%;border-collapse:collapse;}
+.stbl th{font-family:'Space Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:.08em;padding:8px 14px;text-align:left;border-bottom:1px solid var(--border);}
+.stbl td{padding:12px 14px;font-size:12px;color:var(--text2);border-bottom:1px solid rgba(37,42,58,.5);vertical-align:top;}
+.stbl tr:last-child td{border-bottom:none;}
+.stbl tr:hover td{background:rgba(255,255,255,.015);}
+.pbadge{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;}
+.p0{background:rgba(248,113,113,.2);color:var(--red);border:1px solid rgba(248,113,113,.4);}
+.p1{background:rgba(240,150,90,.2);color:var(--accent2);border:1px solid rgba(240,150,90,.4);}
+.p2{background:rgba(251,191,36,.2);color:var(--yellow);border:1px solid rgba(251,191,36,.4);}
+
+/* ── DIVIDER ── */
+.div{height:1px;background:var(--border);margin:28px 0;}
+
+/* ── MARKET SECTION ── */
+.market-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.market-flag{font-size:22px;}
+.market-name{font-size:15px;font-weight:700;color:var(--text);}
+.market-period{font-size:11px;color:var(--text3);}
+
+/* ── MINI CHART ── */
+.mini-chart{height:50px;display:flex;align-items:flex-end;gap:3px;margin-top:8px;}
+.bar{flex:1;border-radius:2px 2px 0 0;transition:height .5s ease;min-height:2px;position:relative;cursor:pointer;}
+.bar:hover::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:var(--bg4);border:1px solid var(--border2);color:var(--text);font-size:10px;padding:3px 7px;border-radius:3px;white-space:nowrap;font-family:'Space Mono',monospace;z-index:10;}
+.bar-label-row{display:flex;gap:3px;margin-top:4px;}
+.bar-lbl{flex:1;text-align:center;font-size:9px;color:var(--text3);}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease;}
+.revealed{opacity:1;transform:translateY(0);}
+
+/* ── FOOTER ── */
+.footer{border-top:1px solid var(--border);padding:16px 48px;display:flex;justify-content:space-between;font-size:10px;color:var(--text3);font-family:'Space Mono',monospace;background:#f0f2f7;}
+
+/* ── CHIP ── */
+.chip{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:500;}
+.chip-g{background:rgba(14,158,104,.08);color:var(--green);border:1px solid rgba(14,158,104,.3);}
+.chip-r{background:rgba(217,65,65,.08);color:var(--red);border:1px solid rgba(217,65,65,.3);}
+.chip-y{background:rgba(196,127,0,.08);color:var(--yellow);border:1px solid rgba(196,127,0,.3);}
+</style>
+</head>
+<body>
+
+<!-- ───── HEADER ───── -->
+<div class="header">
+  <div class="header-row1">
+    <div class="brand">
+      <div class="pulse"></div>
+      <span class="brand-txt">Toomics Global · Marketing Intelligence</span>
+    </div>
+    <div class="header-badges">
+      <span class="hbadge hbadge-blue">WEEKLY REPORT</span>
+      <span class="hbadge hbadge-green">AUTO-GENERATED</span>
+    </div>
+  </div>
+  <div class="header-title">마케팅 주간 리포트 — 5월 2주차</div>
+  <div class="header-meta">
+    <span>📅 2026.05.04 (월) ~ 05.10 (일)</span>
+    <span>🌏 Japan · Taiwan · Thailand · Korea</span>
+    <span>📊 Google Sheets → Claude AI 자동 분석</span>
+    <span>🕐 생성일: 2026.05.11 (월)</span>
+  </div>
+</div>
+
+<!-- ───── NAV ───── -->
+<nav class="nav">
+  <a href="#summary" class="active">Summary</a>
+  <a href="#kpi-achievement">KPI 달성률</a>
+  <a href="#wow">WoW 비교</a>
+  <a href="#market-jp">🇯🇵 Japan</a>
+  <a href="#market-tw">🇹🇼 Taiwan</a>
+  <a href="#market-th">🇹🇭 Thailand</a>
+  <a href="#market-kr">🇰🇷 Korea</a>
+  <a href="#insights">Insights</a>
+  <a href="#strategy">전략 제안</a>
+  <a href="#kpi-trend">📈 KPI 누적 추이</a>
+</nav>
+
+<div class="main">
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 · EXECUTIVE SUMMARY
+═══════════════════════════════════════ -->
+<div id="summary">
+<div class="sec-label reveal">Executive Summary · Last Week 05/04~05/10</div>
+
+<div class="kpi-row reveal">
+  <div class="kcard y">
+    <div class="klabel">아시아 총 광고비</div>
+    <div class="kval">₩17.6M</div>
+    <div class="ksub">전주 ₩17.3M</div>
+    <div class="kdelta up">▲ +1.8%</div>
+  </div>
+  <div class="kcard">
+    <div class="klabel">아시아 FP Revenue</div>
+    <div class="kval">₩17.3M</div>
+    <div class="ksub">전주 ₩17.7M</div>
+    <div class="kdelta dn">▼ -2.2%</div>
+  </div>
+  <div class="kcard g">
+    <div class="klabel">아시아 효율 Effi.(P)</div>
+    <div class="kval">98</div>
+    <div class="ksub">전주 102 · 5월 KPI 83</div>
+    <div class="kdelta up">▲ KPI 대비 +18.1% ✅</div>
+  </div>
+  <div class="kcard g">
+    <div class="klabel">아시아 VIP FP</div>
+    <div class="kval">358건</div>
+    <div class="ksub">전주 362건</div>
+    <div class="kdelta dn">▼ -1.1%</div>
+  </div>
+  <div class="kcard">
+    <div class="klabel">아시아 Regist</div>
+    <div class="kval">1,930</div>
+    <div class="ksub">전주 1,851</div>
+    <div class="kdelta up">▲ +4.3%</div>
+  </div>
+</div>
+
+<div class="kpi-row-4 reveal">
+  <div class="kcard p">
+    <div class="klabel">🇰🇷 국내 광고비</div>
+    <div class="kval">₩3.6M</div>
+    <div class="ksub">전주 ₩3.1M</div>
+    <div class="kdelta up">▲ +15.5%</div>
+  </div>
+  <div class="kcard g">
+    <div class="klabel">🇰🇷 국내 효율 Effi.</div>
+    <div class="kval">63</div>
+    <div class="ksub">전주 64 · 5월 KPI 34</div>
+    <div class="kdelta up">▲ KPI 대비 +85.3% ✅</div>
+  </div>
+  <div class="kcard g">
+    <div class="klabel">🇰🇷 국내 Regist</div>
+    <div class="kval">651</div>
+    <div class="ksub">전주 539</div>
+    <div class="kdelta up">▲ +20.8%</div>
+  </div>
+  <div class="kcard g">
+    <div class="klabel">🇰🇷 국내 VIP FP Rev.</div>
+    <div class="kval">₩1.9M</div>
+    <div class="ksub">전주 ₩1.6M</div>
+    <div class="kdelta up">▲ +23.3%</div>
+  </div>
+</div>
+</div><!-- /summary -->
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 2 · KPI 달성률
+═══════════════════════════════════════ -->
+<div id="kpi-achievement">
+<div class="sec-label reveal">KPI 달성률 · 5월 월간 목표 대비 현황 (어제까지 누적)</div>
+
+<div class="g2 reveal">
+
+  <!-- ASIA 합산 -->
+  <div class="card">
+    <div class="card-title">아시아 합산 달성률 <span class="badge b-blue">Asia (JP+TW+TH+KR) · 5월</span></div>
+    <div class="card-sub">월 마감률 32.26% 기준 (전일 5/10 기준 · 9일 경과 / 31일) · 세로선 = 목표 페이스</div>
+
+    <div class="prog-wrap">
+      <div class="prog-head">
+        <span class="prog-label">Spend</span>
+        <span class="prog-val nt">33.8%</span>
+      </div>
+      <div class="prog-sub">₩97.3M / KPI ₩287.5M</div>
+      <div class="prog-track">
+        <div class="prog-fill" style="width:33.8%;background:var(--accent);"></div>
+        <div class="prog-target" style="left:32.26%;"></div>
+      </div>
+    </div>
+
+    <div class="prog-wrap">
+      <div class="prog-head">
+        <span class="prog-label">FP (P) 유료전환</span>
+        <span class="prog-val up">40.0% ✅</span>
+      </div>
+      <div class="prog-sub">4,705건 / KPI 11,754건</div>
+      <div class="prog-track">
+        <div class="prog-fill" style="width:40%;background:var(--yellow);"></div>
+        <div class="prog-target" style="left:32.26%;"></div>
+      </div>
+    </div>
+
+    <div class="prog-wrap">
+      <div class="prog-head">
+        <span class="prog-label">FP Revenue</span>
+        <span class="prog-val up">39.6% ✅</span>
+      </div>
+      <div class="prog-sub">₩94.7M / KPI ₩239.4M</div>
+      <div class="prog-track">
+        <div class="prog-fill" style="width:39.6%;background:var(--green);"></div>
+        <div class="prog-target" style="left:32.26%;"></div>
+      </div>
+    </div>
+
+    <div class="prog-wrap">
+      <div class="prog-head">
+        <span class="prog-label">Effi.(P) 광고효율</span>
+        <span class="prog-val up">97 ✅ <span style="font-size:10px;font-weight:400;">(KPI 83)</span></span>
+      </div>
+      <div class="prog-sub">KPI 대비 116.9% 달성</div>
+      <div class="prog-track">
+        <div class="prog-fill" style="width:100%;background:var(--green);"></div>
+      </div>
+    </div>
+
+    <div class="prog-wrap">
+      <div class="prog-head">
+        <span class="prog-label">VIP FP</span>
+        <span class="prog-val up">35.5% ✅</span>
+      </div>
+      <div class="prog-sub">1,984건 / KPI 5,590건</div>
+      <div class="prog-track">
+        <div class="prog-fill" style="width:35.5%;background:var(--accent3);"></div>
+        <div class="prog-target" style="left:32.26%;"></div>
+      </div>
+    </div>
+
+    <div class="prog-wrap">
+      <div class="prog-head">
+        <span class="prog-label">Regist</span>
+        <span class="prog-val up">33.5%</span>
+      </div>
+      <div class="prog-sub">14,480명 / KPI 43,217명</div>
+      <div class="prog-track">
+        <div class="prog-fill" style="width:33.5%;background:var(--accent2);"></div>
+        <div class="prog-target" style="left:32.26%;"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding:10px;background:var(--bg3);border-radius:5px;font-size:11px;color:var(--text2);">
+      ✅ 아시아 FP·Revenue·VIP FP 달성률이 모두 월 경과율(<span style="color:var(--text);font-family:'Space Mono',monospace;">32.26%</span>) 초과. Effi. 116.9%로 <strong style="color:var(--green);">수익성 양호</strong>. 잔여 22일 현 페이스 유지 시 KPI 달성 가능.
+    </div>
+  </div>
+
+  <!-- 마켓별 달성률 -->
+  <div class="card">
+    <div class="card-title">마켓별 KPI 달성률 비교 <span class="badge b-orange">5월 누적</span></div>
+    <div class="card-sub">월 경과율 32.26% 기준선 대비 · 세로선 = 목표 페이스</div>
+
+    <!-- Japan -->
+    <div style="margin-bottom:16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span class="mtag mtag-jp">JP</span>
+        <span style="font-size:12px;color:var(--text);font-weight:600;">Japan</span>
+        <span class="chip chip-g">효율 초과달성 ✓</span>
+      </div>
+      <div class="prog-wrap" style="margin-bottom:8px;">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">Spend</span><span class="prog-val nt" style="font-size:11px;">32.8%</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:32.8%;background:var(--jp);"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap" style="margin-bottom:8px;">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">FP Revenue</span><span class="prog-val nt" style="font-size:11px;">38.3%</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:38.3%;background:var(--jp);opacity:.7;"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">Effi.(P)</span><span class="prog-val up" style="font-size:11px;">100 ✅ <span style="font-size:9px;font-weight:400;">(KPI 86)</span></span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:100%;background:var(--green);"></div></div>
+      </div>
+    </div>
+
+    <!-- Taiwan -->
+    <div style="margin-bottom:16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span class="mtag mtag-tw">TW</span>
+        <span style="font-size:12px;color:var(--text);font-weight:600;">Taiwan</span>
+        <span class="chip chip-y">페이스 부족 △</span>
+      </div>
+      <div class="prog-wrap" style="margin-bottom:8px;">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">Spend</span><span class="prog-val nt" style="font-size:11px;">32.9%</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:32.9%;background:var(--tw);"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap" style="margin-bottom:8px;">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">FP Revenue</span><span class="prog-val nt" style="font-size:11px;">36.5%</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:36.5%;background:var(--tw);opacity:.7;"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">Effi.(P)</span><span class="prog-val up" style="font-size:11px;">97 ✅ <span style="font-size:9px;font-weight:400;">(KPI 87)</span></span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:100%;background:var(--green);"></div></div>
+      </div>
+    </div>
+
+    <!-- Thailand -->
+    <div style="margin-bottom:16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span class="mtag mtag-th">TH</span>
+        <span style="font-size:12px;color:var(--text);font-weight:600;">Thailand</span>
+        <span class="chip chip-g">FP 페이스 양호 ✓</span>
+      </div>
+      <div class="prog-wrap" style="margin-bottom:8px;">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">Spend</span><span class="prog-val nt" style="font-size:11px;">33.5%</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:33.5%;background:var(--th);"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap" style="margin-bottom:8px;">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">FP Revenue</span><span class="prog-val up" style="font-size:11px;">34.6%</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:34.6%;background:var(--th);opacity:.7;"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">Effi.(P)</span><span class="prog-val up" style="font-size:11px;">194 ✅ <span style="font-size:9px;font-weight:400;">(KPI 189)</span></span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:100%;background:var(--green);"></div></div>
+      </div>
+    </div>
+
+    <!-- Korea -->
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span class="mtag mtag-kr">KR</span>
+        <span style="font-size:12px;color:var(--text);font-weight:600;">Korea</span>
+        <span class="chip chip-g">FP·Revenue KPI 초과 ✓</span>
+      </div>
+      <div class="prog-wrap" style="margin-bottom:8px;">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">Spend</span><span class="prog-val nt" style="font-size:11px;">누적 ₩34.1M</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:35.5%;background:var(--kr);"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap" style="margin-bottom:8px;">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">FP Revenue</span><span class="prog-val up" style="font-size:11px;">56.4% ✅ KPI 초과</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:56.4%;background:var(--kr);opacity:.7;"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">Effi.(P)</span><span class="prog-val up" style="font-size:11px;">54 ✅ <span style="font-size:9px;font-weight:400;">(KPI 34)</span></span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:100%;background:var(--green);"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- /kpi-achievement -->
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 · WoW 비교
+═══════════════════════════════════════ -->
+<div id="wow">
+<div class="sec-label reveal">Week-over-Week 비교 · 전전주 vs 전주</div>
+
+<div class="g2 reveal">
+  <div class="card">
+    <div class="card-title">🌏 아시아 통합 WoW <span class="badge b-blue">raw(P) · 전체기여</span></div>
+    <div class="card-sub">04/27~05/03 vs 05/04~05/10</div>
+    <table class="tbl">
+      <thead><tr><th>지표</th><th>전전주</th><th>전주</th><th>변화</th></tr></thead>
+      <tbody>
+        <tr><td>Spend</td><td>₩17.3M</td><td>₩17.6M</td><td class="up">+1.8%</td></tr>
+        <tr><td>FP (P)</td><td>794</td><td>771</td><td class="dn">-2.9%</td></tr>
+        <tr><td>FP Revenue</td><td>₩17.7M</td><td>₩17.3M</td><td class="dn">-2.2%</td></tr>
+        <tr><td>Effi.(P)</td><td>102</td><td>98</td><td class="dn">-3.9%</td></tr>
+        <tr><td>Visit</td><td>163,590</td><td>162,045</td><td class="dn">-0.9%</td></tr>
+        <tr><td>Regist</td><td>1,851</td><td>1,930</td><td class="up">+4.3%</td></tr>
+        <tr><td>VIP FP</td><td>362</td><td>358</td><td class="dn">-1.1%</td></tr>
+        <tr><td>VIP FP Rev.</td><td>₩7.8M</td><td>₩7.7M</td><td class="dn">-1.4%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <div class="card-title">🇰🇷 국내 WoW <span class="badge b-purple">raw(K_ad) · 7일기여</span></div>
+    <div class="card-sub">04/27~05/03 vs 05/04~05/10</div>
+    <table class="tbl">
+      <thead><tr><th>지표</th><th>전전주</th><th>전주</th><th>변화</th></tr></thead>
+      <tbody>
+        <tr><td>Spend</td><td>₩3.1M</td><td>₩3.6M</td><td class="nt">+15.5%↑</td></tr>
+        <tr><td>FP (P)</td><td>110</td><td>113</td><td class="up">+2.7%</td></tr>
+        <tr><td>FP Revenue</td><td>₩2.0M</td><td>₩2.3M</td><td class="up">+14.2%</td></tr>
+        <tr><td>Effi.(P)</td><td>64</td><td>63</td><td class="dn">-1.6% 🚨</td></tr>
+        <tr><td>Visit</td><td>10,261</td><td>12,550</td><td class="up">+22.3%</td></tr>
+        <tr><td>Regist</td><td>539</td><td>651</td><td class="up">+20.8%</td></tr>
+        <tr><td>VIP FP</td><td>90</td><td>92</td><td class="up">+2.2%</td></tr>
+        <tr><td>VIP FP Rev.</td><td>₩1.6M</td><td>₩1.9M</td><td class="up">+23.3%</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- 일별 성과 -->
+<div class="card reveal" style="margin-bottom:14px;">
+  <div class="card-title">아시아 일별 성과 <span class="badge b-blue">05/04~05/10</span></div>
+  <div class="card-sub">Spend · FP Revenue · Effi.(P) · VIP FP</div>
+  <table class="tbl">
+    <thead>
+      <tr><th>날짜</th><th>요일</th><th>Spend</th><th>FP Rev.(P)</th><th>Effi.</th><th>VIP FP</th><th>Regist</th><th>CPA(R)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>05/04</td><td style="color:var(--text2);">MON</td><td>₩2,474,747</td><td>₩2,158,166</td><td class="nt">87</td><td>43</td><td>273</td><td>₩9,065</td></tr>
+      <tr><td>05/05</td><td style="color:var(--text2);">TUE</td><td>₩2,391,914</td><td>₩2,682,303</td><td class="up">112</td><td>54</td><td>251</td><td>₩9,530</td></tr>
+      <tr><td>05/06</td><td style="color:var(--text2);">WED</td><td>₩2,438,173</td><td>₩3,522,924</td><td class="up" style="font-weight:700;">144 🔥</td><td>71</td><td>326</td><td>₩7,479</td></tr>
+      <tr><td>05/07</td><td style="color:var(--text2);">THU</td><td>₩2,434,538</td><td>₩2,523,815</td><td class="up">104</td><td>52</td><td>234</td><td>₩10,404</td></tr>
+      <tr><td>05/08</td><td style="color:var(--text2);">FRI</td><td>₩2,451,281</td><td>₩1,906,684</td><td class="dn">78</td><td>47</td><td>255</td><td>₩9,613</td></tr>
+      <tr><td>05/09</td><td style="color:var(--text2);">SAT</td><td>₩2,846,467</td><td>₩2,301,669</td><td class="dn">81</td><td>46</td><td>313</td><td>₩9,094</td></tr>
+      <tr><td>05/10</td><td style="color:var(--text2);">SUN</td><td>₩2,570,853</td><td>₩2,211,266</td><td class="dn">86</td><td>45</td><td>278</td><td>₩9,248</td></tr>
+    </tbody>
+  </table>
+  <div style="margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+    <span style="font-size:11px;color:var(--text3);">요일별 효율 패턴 →</span>
+    <span class="chip chip-g">WED 144 🔥최고</span>
+    <span class="chip chip-g">TUE 112</span>
+    <span class="chip chip-g">THU 104</span>
+    <span class="chip chip-y">MON 87</span>
+    <span class="chip chip-r">SUN 86</span>
+    <span class="chip chip-r">SAT 81</span>
+    <span class="chip chip-r">FRI 78 최저</span>
+  </div>
+</div>
+</div><!-- /wow -->
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 4 · MARKET: JAPAN
+═══════════════════════════════════════ -->
+<div id="market-jp">
+<div class="sec-label reveal">마켓별 상세 · Japan</div>
+
+<div class="card reveal" style="margin-bottom:14px;border-color:rgba(248,113,113,.25);">
+  <div class="market-header">
+    <span class="market-flag">🇯🇵</span>
+    <div>
+      <div class="market-name">Japan <span class="mtag mtag-jp">JP</span></div>
+      <div class="market-period">5월 누적 (어제까지) · raw(P) + raw(ad) 참조</div>
+    </div>
+    <div style="margin-left:auto;text-align:right;">
+      <div style="font-family:'Space Mono',monospace;font-size:22px;color:var(--jp);">Effi. 100</div>
+      <div style="font-size:11px;color:var(--text3);">누적 효율 · KPI 86 대비 초과</div>
+    </div>
+  </div>
+
+  <div class="g3">
+    <div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">MONTHLY KPI vs 현황</div>
+      <table class="tbl">
+        <thead><tr><th>지표</th><th>KPI</th><th>누적</th><th>달성률</th></tr></thead>
+        <tbody>
+          <tr><td>Spend</td><td>₩79.1M</td><td>₩25.9M</td><td class="nt">32.8%</td></tr>
+          <tr><td>FP (P)</td><td>3,055</td><td>1,171</td><td class="nt">38.3%</td></tr>
+          <tr><td>FP Revenue</td><td>₩68.1M</td><td>₩26.1M</td><td class="nt">38.3%</td></tr>
+          <tr><td>Effi.(P)</td><td>86</td><td>100</td><td class="up">✅ +16.3pt</td></tr>
+          <tr><td>VIP FP</td><td>1,417</td><td>532</td><td class="nt">37.5%</td></tr>
+          <tr><td>VIP FP Rev.</td><td>₩31.4M</td><td>₩11.4M</td><td class="nt">36.3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">WoW (raw ad · 7일기여)</div>
+      <table class="tbl">
+        <thead><tr><th>지표</th><th>전전주</th><th>전주</th><th>Δ</th></tr></thead>
+        <tbody>
+          <tr><td>Spend</td><td>₩2.0M</td><td>₩1.9M</td><td class="dn">-4.8%</td></tr>
+          <tr><td>FP (P)</td><td>36</td><td>41</td><td class="up">+13.9%</td></tr>
+          <tr><td>FP Revenue</td><td>₩668K</td><td>₩709K</td><td class="up">+6.1%</td></tr>
+          <tr><td>Effi.(P)</td><td>33</td><td>37</td><td class="up">+11.5%</td></tr>
+          <tr><td>VIP FP</td><td>32</td><td>35</td><td class="up">+9.4%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">일평균 목표 대비</div>
+      <div class="prog-wrap">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">일평균 Spend</span><span class="prog-val nt" style="font-size:11px;">₩2.59M / 목표 ₩2.53M</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:100%;background:var(--jp);"></div></div>
+      </div>
+      <div class="prog-wrap">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">일평균 FP Revenue</span><span class="prog-val up" style="font-size:11px;">₩2.61M / 목표 ₩2.00M</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:100%;background:var(--green);"></div></div>
+      </div>
+      <div style="margin-top:12px;padding:10px;background:var(--bg3);border-radius:5px;font-size:11px;color:var(--text2);">
+        ✅ 일평균 Revenue가 목표 초과. Effi. 100으로 수익성 양호. FP 페이스도 38.3%로 정상궤도.
+      </div>
+    </div>
+  </div>
+
+  <!-- 골든위크 분석 -->
+  <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border);">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+      <span style="font-size:16px;">🎌</span>
+      <span style="font-size:13px;font-weight:700;color:var(--text);">골든위크 전후 성과 비교</span>
+      <span class="badge b-yellow">4/29~5/7 · 9일간</span>
+    </div>
+
+    <!-- 3구간 비교 카드 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px;">
+      <div style="background:var(--bg3);border-radius:6px;padding:14px;border:1px solid var(--border);">
+        <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:.1em;margin-bottom:10px;">GW 이전 · 7일 일평균<br>4/22 ~ 4/28</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--text2);">FP Revenue</span><span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text);">₩2,351,708</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--text2);">Effi.(P)</span><span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--yellow);">91.9</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--text2);">VIP FP</span><span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text);">53.4건</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--text2);">Regist</span><span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text);">280.6명</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="font-size:11px;color:var(--text2);">Spend</span><span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text);">₩2,554,248</span></div>
+        </div>
+      </div>
+      <div style="background:rgba(248,113,113,0.07);border-radius:6px;padding:14px;border:1px solid rgba(248,113,113,0.3);position:relative;">
+        <div style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:var(--jp);color:#000;font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;white-space:nowrap;">🎌 골든위크</div>
+        <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--jp);letter-spacing:.1em;margin-bottom:10px;">GW 기간 · 9일 일평균<br>4/29 ~ 5/7</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:var(--text2);">FP Revenue</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--green);">₩2,685,932 <span style="font-size:9px;">▲+14.2%</span></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:var(--text2);">Effi.(P)</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--green);">108.6 <span style="font-size:9px;">▲+18.2%</span></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:var(--text2);">VIP FP</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--green);">53.6건 <span style="font-size:9px;">▲+0.4%</span></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:var(--text2);">Regist</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--red);">269.9명 <span style="font-size:9px;">▼-3.8%</span></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;">
+            <span style="font-size:11px;color:var(--text2);">Spend</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text);">₩2,478,229</span>
+          </div>
+        </div>
+      </div>
+      <div style="background:var(--bg3);border-radius:6px;padding:14px;border:1px solid var(--border);">
+        <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:.1em;margin-bottom:10px;">GW 이후 · 3일 일평균<br>5/8 ~ 5/10</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:var(--text2);">FP Revenue</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--red);">₩2,139,873 <span style="font-size:9px;">▼-20.3%</span></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:var(--text2);">Effi.(P)</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--red);">81.7 <span style="font-size:9px;">▼-24.8%</span></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:var(--text2);">VIP FP</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--red);">46.0건 <span style="font-size:9px;">▼-14.2%</span></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:var(--text2);">Regist</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--green);">282.0명 <span style="font-size:9px;">▲+4.5%</span></span>
+          </div>
+          <div style="display:flex;justify-content:space-between;">
+            <span style="font-size:11px;color:var(--text2);">Spend</span>
+            <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text);">₩2,622,867</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GW 일별 Effi 바 -->
+    <div style="margin-bottom:12px;">
+      <div style="font-size:11px;color:var(--text3);margin-bottom:8px;font-family:'Space Mono',monospace;">골든위크 9일간 일별 Effi.(P)</div>
+      <div style="display:flex;align-items:flex-end;gap:4px;height:60px;padding-bottom:2px;">
+        <!-- 4/29 Effi:106 -->
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);">106</span>
+          <div style="width:100%;background:var(--jp);border-radius:2px 2px 0 0;opacity:.85;" data-tip="4/29 Effi.106" style="height:calc(106/144*48px);"></div>
+          <span style="font-size:8px;color:var(--text3);">4/29</span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);">109</span>
+          <div style="width:100%;background:var(--jp);border-radius:2px 2px 0 0;opacity:.85;"></div>
+          <span style="font-size:8px;color:var(--text3);">4/30</span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--green);">131</span>
+          <div style="width:100%;background:var(--green);border-radius:2px 2px 0 0;"></div>
+          <span style="font-size:8px;color:var(--text3);">5/1</span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);">103</span>
+          <div style="width:100%;background:var(--jp);border-radius:2px 2px 0 0;opacity:.7;"></div>
+          <span style="font-size:8px;color:var(--text3);">5/2</span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);">81</span>
+          <div style="width:100%;background:var(--yellow);border-radius:2px 2px 0 0;opacity:.7;"></div>
+          <span style="font-size:8px;color:var(--text3);">5/3</span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);">87</span>
+          <div style="width:100%;background:var(--yellow);border-radius:2px 2px 0 0;opacity:.7;"></div>
+          <span style="font-size:8px;color:var(--text3);">5/4</span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);">112</span>
+          <div style="width:100%;background:var(--jp);border-radius:2px 2px 0 0;opacity:.85;"></div>
+          <span style="font-size:8px;color:var(--text3);">5/5</span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--green);">144</span>
+          <div style="width:100%;background:var(--green);border-radius:2px 2px 0 0;"></div>
+          <span style="font-size:8px;color:var(--text3);">5/6</span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+          <span style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text2);">104</span>
+          <div style="width:100%;background:var(--jp);border-radius:2px 2px 0 0;opacity:.85;"></div>
+          <span style="font-size:8px;color:var(--text3);">5/7</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GW 일별 Effi 차트 (Canvas) -->
+    <div style="position:relative;height:140px;margin-bottom:12px;">
+      <canvas id="gwChart"></canvas>
+    </div>
+
+    <div class="ins-list">
+      <div class="ins good">
+        <div class="ins-icon">🎌</div>
+        <div>
+          <div class="ins-title">골든위크 기간 FP Revenue +14.2%, Effi. +18.2% 상승</div>
+          <div class="ins-desc">GW 이전 일평균 대비 Revenue ₩2.35M → ₩2.69M, Effi. 91.9 → 108.6으로 개선. 동일 Spend에서 수익성이 의미있게 향상됨. 특히 5/1(Effi.131), 5/6(Effi.144)이 GW 피크.</div>
+        </div>
+      </div>
+      <div class="ins warn">
+        <div class="ins-icon">📉</div>
+        <div>
+          <div class="ins-title">GW 종료 후 즉각 반락 — Effi. 108.6 → 81.7 (-24.8%)</div>
+          <div class="ins-desc">5/8~5/10 이후 효율이 GW 이전보다도 낮은 수준으로 하락. GW 수요 소진 효과로 판단. 5월 중순 이후 일본 마켓 광고 전략 재조정 필요.</div>
+        </div>
+      </div>
+      <div class="ins info">
+        <div class="ins-icon">📌</div>
+        <div>
+          <div class="ins-title">GW 기간 Spend ₩75K 절감하면서 Revenue 증가 — 자연 수요 높음</div>
+          <div class="ins-desc">GW 중 Spend가 이전보다 오히려 소폭 감소(₩2.55M→₩2.48M)했으나 Revenue는 증가. 시즌 자연 수요가 높을 때 입찰가를 낮춰도 성과가 나는 패턴. 내년 GW 예산 전략 참고 데이터.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 주간 동향 코멘트 -->
+  <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border);">
+    <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">📝 주간 동향 코멘트 · 5/4~5/10 vs 4/27~5/3</div>
+    <div class="ins-list">
+      <div class="ins good">
+        <div class="ins-icon">📈</div>
+        <div>
+          <div class="ins-title">광고비 -4.8% 절감하면서 FP Rev +6.1%, Effi. 33→37 개선</div>
+          <div class="ins-desc">GW 이후 반락이 있었지만 광고 효율 자체는 전전주 대비 회복 중. 5/6(수) Asia 전체 최고 Effi.144를 JP가 견인. 5/8 이후 GW 수요 소진으로 주말 효율이 80대로 내려온 점은 지속 모니터링 필요.</div>
+        </div>
+      </div>
+      <div class="ins info">
+        <div class="ins-icon">📌</div>
+        <div>
+          <div class="ins-title">매체 특이점 — 오가닉 Revenue가 광고의 6배 이상</div>
+          <div class="ins-desc">JP raw(ad) Spend는 주당 약 ₩1.9M으로 Asia 전체 대비 점유율 낮음. defaultchannel(오가닉) Revenue가 ₩4.7M/주로 광고 기여 Revenue를 압도 — JP는 오가닉 수요가 지배적인 마켓으로 광고 효율 해석 시 참고 필요.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- /market-jp -->
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 · MARKET: TAIWAN
+═══════════════════════════════════════ -->
+<div id="market-tw">
+<div class="sec-label reveal">마켓별 상세 · Taiwan</div>
+
+<div class="card reveal" style="margin-bottom:14px;border-color:rgba(251,191,36,.2);">
+  <div class="market-header">
+    <span class="market-flag">🇹🇼</span>
+    <div>
+      <div class="market-name">Taiwan <span class="mtag mtag-tw">TW</span></div>
+      <div class="market-period">5월 누적 (어제까지) · raw(P) 참조</div>
+    </div>
+    <div style="margin-left:auto;text-align:right;">
+      <div style="font-family:'Space Mono',monospace;font-size:22px;color:var(--tw);">Effi. 97</div>
+      <div style="font-size:11px;color:var(--text3);">누적 효율 · KPI 87 대비 초과</div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">MONTHLY KPI vs 현황</div>
+      <table class="tbl">
+        <thead><tr><th>지표</th><th>KPI</th><th>누적</th><th>달성률</th></tr></thead>
+        <tbody>
+          <tr><td>Spend</td><td>₩72.2M</td><td>₩23.8M</td><td class="nt">32.9%</td></tr>
+          <tr><td>FP (P)</td><td>2,227</td><td>843</td><td class="nt">37.9%</td></tr>
+          <tr><td>FP Revenue</td><td>₩62.9M</td><td>₩23.0M</td><td class="nt">36.5%</td></tr>
+          <tr><td>Effi.(P)</td><td>87</td><td>97</td><td class="up">✅ +10pt</td></tr>
+          <tr><td>VIP FP</td><td>1,077</td><td>368</td><td class="nt">34.2%</td></tr>
+          <tr><td>VIP FP Rev.</td><td>₩28.3M</td><td>₩9.0M</td><td class="nt">31.7%</td></tr>
+          <tr><td>Regist</td><td>8,052</td><td>3,132</td><td class="up">38.9%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">KPI 달성률 비주얼</div>
+      <div class="prog-wrap">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">Spend</span><span class="prog-val nt" style="font-size:11px;">32.9%</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:32.9%;background:var(--tw);"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">FP Revenue</span><span class="prog-val nt" style="font-size:11px;">36.5%</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:36.5%;background:var(--tw);opacity:.8;"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">VIP FP</span><span class="prog-val nt" style="font-size:11px;">34.2%</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:34.2%;background:var(--tw);opacity:.6;"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div class="prog-wrap">
+        <div class="prog-head"><span class="prog-label" style="font-size:11px;">Regist</span><span class="prog-val up" style="font-size:11px;">38.9% ✅</span></div>
+        <div class="prog-track"><div class="prog-fill" style="width:38.9%;background:var(--green);"></div><div class="prog-target" style="left:32.26%;"></div></div>
+      </div>
+      <div style="margin-top:12px;padding:10px;background:var(--bg3);border-radius:5px;font-size:11px;color:var(--text2);">
+        ⚠️ Spend/Revenue 달성률은 정상 페이스이나 VIP FP(34.2%)가 소폭 부족. Regist(38.9%)는 양호.
+      </div>
+    </div>
+  </div>
+
+  <!-- 주간 동향 코멘트 -->
+  <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border);">
+    <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">📝 주간 동향 코멘트 · 5/4~5/10 vs 4/27~5/3</div>
+    <div class="ins-list">
+      <div class="ins good">
+        <div class="ins-icon">📈</div>
+        <div>
+          <div class="ins-title">FP Revenue +36.5% 달성률 · Regist 38.9%로 마켓 중 최상위 유입 흐름</div>
+          <div class="ins-desc">월 경과율(32.26%) 초과하며 양호한 페이스 유지. Effi.97로 KPI 87 대비 안정적. Regist 전환율이 이번 주 개선 추세이며, 유입 볼륨 대비 오가닉 채널 기여도도 높은 편.</div>
+        </div>
+      </div>
+      <div class="ins warn">
+        <div class="ins-icon">⚠️</div>
+        <div>
+          <div class="ins-title">VIP FP 달성률 34.2% — 페이스 소폭 미달, 리텐션 추이 주목</div>
+          <div class="ins-desc">FP 전환은 양호하나 VIP FP 비율이 경과율 대비 약간 낮음. 신규 유입 대비 고가치 전환율이 떨어지는 패턴으로, 향후 4주간 VIP 전환 추이 모니터링 권장.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- /market-tw -->
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 6 · MARKET: THAILAND
+═══════════════════════════════════════ -->
+<div id="market-th">
+<div class="sec-label reveal">마켓별 상세 · Thailand</div>
+
+<div class="card reveal" style="margin-bottom:14px;border-color:rgba(52,211,153,.2);">
+  <div class="market-header">
+    <span class="market-flag">🇹🇭</span>
+    <div>
+      <div class="market-name">Thailand <span class="mtag mtag-th">TH</span></div>
+      <div class="market-period">5월 누적 (어제까지) · raw(P) 참조</div>
+    </div>
+    <div style="margin-left:auto;text-align:right;">
+      <div style="font-family:'Space Mono',monospace;font-size:22px;color:var(--th);">Effi. 194</div>
+      <div style="font-size:11px;color:var(--text3);">누적 효율 · KPI 189 대비 초과 🔥</div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">MONTHLY KPI vs 현황</div>
+      <table class="tbl">
+        <thead><tr><th>지표</th><th>KPI</th><th>누적</th><th>달성률</th></tr></thead>
+        <tbody>
+          <tr><td>Spend</td><td>₩40.3M</td><td>₩13.5M</td><td class="nt">33.5%</td></tr>
+          <tr><td>FP (P)</td><td>3,727</td><td>1,337</td><td class="nt">35.9%</td></tr>
+          <tr><td>FP Revenue</td><td>₩76.0M</td><td>₩26.3M</td><td class="nt">34.6%</td></tr>
+          <tr><td>Effi.(P)</td><td>189</td><td>194</td><td class="up">✅ +5pt</td></tr>
+          <tr><td>VIP FP</td><td>1,957</td><td>723</td><td class="nt">36.9%</td></tr>
+          <tr><td>Regist</td><td>17,077</td><td>6,186</td><td class="nt">36.2%</td></tr>
+          <tr><td>Visit</td><td>403,644</td><td>182,778</td><td class="up">45.3% ✅</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">특이사항</div>
+      <div class="ins-list">
+        <div class="ins good">
+          <div class="ins-icon">🔥</div>
+          <div>
+            <div class="ins-title">Effi. 194로 아시아 최고</div>
+            <div class="ins-desc">KPI 대비 광고 효율이 가장 높음. 동일 예산 대비 Revenue 산출이 탁월.</div>
+          </div>
+        </div>
+        <div class="ins good">
+          <div class="ins-icon">👣</div>
+          <div>
+            <div class="ins-title">Visit 45.3% — 월간 페이스 초과</div>
+            <div class="ins-desc">트래픽 유입이 KPI 대비 앞서 있음. Regist(36.2%) 전환율은 정상 수준.</div>
+          </div>
+        </div>
+        <div class="ins info">
+          <div class="ins-icon">📌</div>
+          <div>
+            <div class="ins-title">Revenue 페이스는 34.6%로 소폭 부족</div>
+            <div class="ins-desc">월 경과율(32.26%)보다 0.9%p 낮음. 남은 기간 정상 운영 시 달성 가능한 수준.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 주간 동향 코멘트 -->
+  <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border);">
+    <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">📝 주간 동향 코멘트 · 5/4~5/10 vs 4/27~5/3</div>
+    <div class="ins-list">
+      <div class="ins good">
+        <div class="ins-icon">📈</div>
+        <div>
+          <div class="ins-title">Spend 동결하면서 FP Rev +19%, Effi. 60→71, VIP FP Rev +49% 급등</div>
+          <div class="ins-desc">예산 증가 없이 성과가 올라온 점이 특징. Visit 월간 페이스 45.3%로 Asia 전체 유일한 KPI 초과. VIP FP Revenue가 전전주 대비 거의 2배 수준으로 증가해 고가치 전환이 집중된 한 주.</div>
+        </div>
+      </div>
+      <div class="ins warn">
+        <div class="ins-icon">⚠️</div>
+        <div>
+          <div class="ins-title">매체 특이점 — TikTok 비승인 이슈 해소 여부 확인 필요</div>
+          <div class="ins-desc">5/4 이후 TikTok 비승인 이슈가 작업 로그에 기록되어 있음. TH는 TikTok 비중이 있는 마켓으로, 이슈 지속 시 노출 감소가 Visit/Regist에 영향을 줄 수 있음. 현재 상태 및 소재 재승인 여부 확인 권장.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- /market-th -->
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 7 · MARKET: KOREA
+═══════════════════════════════════════ -->
+<div id="market-kr">
+<div class="sec-label reveal">마켓별 상세 · Korea</div>
+
+<div class="card reveal" style="margin-bottom:14px;border-color:rgba(167,139,250,.25);">
+  <div class="market-header">
+    <span class="market-flag">🇰🇷</span>
+    <div>
+      <div class="market-name">Korea <span class="mtag mtag-kr">KR</span></div>
+      <div class="market-period">5월 누적 (어제까지) · raw(K_p) + raw(K_ad) 참조</div>
+    </div>
+    <div style="margin-left:auto;text-align:right;">
+      <div style="font-family:'Space Mono',monospace;font-size:22px;color:var(--kr);">Effi. 54</div>
+      <div style="font-size:11px;color:var(--text3);">누적 효율 · KPI 34 대비 초과달성 ✅</div>
+    </div>
+  </div>
+
+  <div class="g3">
+    <div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">MONTHLY KPI vs 현황</div>
+      <table class="tbl">
+        <thead><tr><th>지표</th><th>KPI</th><th>누적</th><th>달성률</th></tr></thead>
+        <tbody>
+          <tr><td>Spend</td><td>₩95.9M</td><td>₩34.1M</td><td class="nt">35.5%</td></tr>
+          <tr><td>FP (P)</td><td>2,745</td><td>1,312</td><td class="up">47.8% ✅</td></tr>
+          <tr><td>FP Revenue</td><td>₩32.4M</td><td>₩18.3M</td><td class="up">56.4% ✅</td></tr>
+          <tr><td>Effi.(P)</td><td>34</td><td>54</td><td class="up">✅ +20pt</td></tr>
+          <tr><td>VIP FP</td><td>1,139</td><td>361</td><td class="nt">31.7%</td></tr>
+          <tr><td>Regist</td><td>9,121</td><td>2,350</td><td class="nt">25.8%</td></tr>
+          <tr><td>Visit</td><td>1,350,027</td><td>425,119</td><td class="nt">31.5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">WoW 트렌드 (raw K_ad)</div>
+      <table class="tbl">
+        <thead><tr><th>지표</th><th>전전주</th><th>전주</th><th>Δ</th></tr></thead>
+        <tbody>
+          <tr><td>Spend</td><td>₩3.1M</td><td>₩3.6M</td><td class="nt">+15.5%</td></tr>
+          <tr><td>FP Revenue</td><td>₩2.0M</td><td>₩2.3M</td><td class="up">+14.2%</td></tr>
+          <tr><td>Effi.(P)</td><td>64</td><td>63</td><td class="dn">-1.6%</td></tr>
+          <tr><td>Visit</td><td>10,261</td><td>12,550</td><td class="up">+22.3%</td></tr>
+          <tr><td>Regist</td><td>539</td><td>651</td><td class="up">+20.8%</td></tr>
+          <tr><td>VIP FP</td><td>90</td><td>92</td><td class="up">+2.2%</td></tr>
+          <tr><td>VIP FP Rev.</td><td>₩1.6M</td><td>₩1.9M</td><td class="up">+23.3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">해석 포인트</div>
+      <div class="ins-list">
+
+        <div class="ins good">
+          <div class="ins-icon">✅</div>
+          <div>
+            <div class="ins-title">FP·Revenue·Effi. 모두 KPI 초과달성</div>
+            <div class="ins-desc">FP Revenue 달성률 56.4%, Effi. KPI 34 대비 현황 54로 158.8% 달성. 재결제 기여를 포함한 전체 수익성 관점에서 판단 필요한 마켓.</div>
+          </div>
+        </div>
+
+        <div class="ins good">
+          <div class="ins-icon">📈</div>
+          <div>
+            <div class="ins-title">Visit·Regist 성장세 — 구독 오픈 효과 가능성</div>
+            <div class="ins-desc">Visit +22.3%, Regist +20.8%로 유입 지표 개선 중. KR 웹 구독 시스템 오픈 이후 신규 유저 유입이 증가하는 초기 반응일 가능성. 구독 전환율 추이를 향후 4주간 모니터링 권장.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 주간 동향 코멘트 -->
+  <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--border);">
+    <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-family:'Space Mono',monospace;letter-spacing:.05em;">📝 주간 동향 코멘트 · 5/4~5/10 vs 4/27~5/3</div>
+    <div class="ins-list">
+      <div class="ins good">
+        <div class="ins-icon">📈</div>
+        <div>
+          <div class="ins-title">Spend +15.5% 늘었지만 FP Rev +14.2% · VIP FP Rev +23.3% 동반 성장</div>
+          <div class="ins-desc">Effi. 64→63으로 소폭 하락했으나 매출 지표는 고르게 상승. Regist +20.8%, Visit +22.3%로 구독 오픈 이후 유입 볼륨이 뚜렷하게 확대 중. Spend 증가 대비 매출 레버리지가 작동하고 있는 구간으로 해석.</div>
+        </div>
+      </div>
+      <div class="ins info">
+        <div class="ins-icon">📌</div>
+        <div>
+          <div class="ins-title">매체 특이점 — 구글·네이버 검색광고 온보딩 진행 중, Attribution 갭 주의</div>
+          <div class="ins-desc">검색광고 세팅이 아직 본격 집행 전으로, 완료 후 Effi. 변화 추이 주목 필요. 한편 이번 주 Purchase 수(127건)가 전전주(155건) 대비 -18% 감소했으나 FP는 증가 — 매체 기여 기간 차이로 인한 Attribution 갭 가능성 있음.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- /market-kr -->
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 8 · INSIGHTS
+═══════════════════════════════════════ -->
+<div id="insights">
+<div class="sec-label reveal">Key Insights · AI 분석</div>
+
+<div class="g2 reveal">
+  <div class="ins-list">
+    <div class="ins warn">
+      <div class="ins-icon">📉</div>
+      <div>
+        <div class="ins-title">아시아 Revenue 3월 대비 ~20% 하락 추세</div>
+        <div class="ins-desc">3월 주평균 ₩21~22M → 5월 ₩17.3M. 시즌 효과 또는 콘텐츠 라인업 변화 가능성. 마켓별 분리 추적 후 원인 특정 필요.</div>
+      </div>
+    </div>
+  </div>
+  <div class="ins-list">
+    <div class="ins good">
+      <div class="ins-icon">🇯🇵</div>
+      <div>
+        <div class="ins-title">일본 WoW FP +13.9%, Revenue +6.1% 개선</div>
+        <div class="ins-desc">전전주 대비 광고비 -4.8% 절감하면서도 FP +13.9% 증가. 효율 개선(Effi. 33→37). 아시아 내 가장 건강한 WoW 트렌드.</div>
+      </div>
+    </div>
+    <div class="ins info">
+      <div class="ins-icon">📊</div>
+      <div>
+        <div class="ins-title">월간 KPI 달성 페이스 — Revenue 전반적 부족</div>
+        <div class="ins-desc">월 경과율 32.26% 대비 아시아 Revenue 달성률 39.57%로 양호. 단 VIP FP 달성률 35.49%로 타이트. 국내 Regist(25.8%)는 가장 뒤처짐.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- /insights -->
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 9 · STRATEGY
+═══════════════════════════════════════ -->
+<div id="strategy">
+<div class="sec-label reveal">Strategic Recommendations</div>
+
+<div class="card reveal">
+  <table class="stbl">
+    <thead>
+      <tr><th style="width:55px;">우선순위</th><th>조치 사항</th><th style="width:55px;">마켓</th><th style="width:55px;">기한</th><th style="width:90px;">기대 임팩트</th><th style="width:65px;">상태</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="pbadge p0">P0</span></td>
+        <td>
+          <div style="color:var(--text);font-weight:600;margin-bottom:4px;">주말(금~일) 예산 10~20% 감축 → 수·목 이동</div>
+          <div style="font-size:11px;color:var(--text3);">수요일 Effi. 144 vs 금요일 78. 동일 총예산 내 효율 개선. 이번 주부터 즉시 적용 가능.</div>
+        </td>
+        <td><span class="mtag mtag-jp">JP</span> <span class="mtag mtag-tw">TW</span></td>
+        <td style="color:var(--text2);">1주</td>
+        <td><span class="kdelta up" style="display:inline-flex;">Effi. +5~10pt</span></td>
+        <td><span class="badge b-red">긴급</span></td>
+      </tr>
+      <tr>
+        <td><span class="pbadge p0">P0</span></td>
+        <td>
+          <div style="color:var(--text);font-weight:600;margin-bottom:4px;">국내 채널별 CPA·전환율 진단 (Effi. 63 원인)</div>
+          <div style="font-size:11px;color:var(--text3);">Visit/Regist 증가에도 Revenue 전환 미흡. 채널별 랜딩→결제 이탈 단계 확인 후 하위 채널 예산 조정.</div>
+        </td>
+        <td><span class="mtag mtag-kr">KR</span></td>
+        <td style="color:var(--text2);">2주</td>
+        <td><span class="kdelta nt" style="display:inline-flex;">Effi. 80+ 목표</span></td>
+        <td><span class="badge b-orange">검토중</span></td>
+      </tr>
+      <tr>
+        <td><span class="pbadge p1">P1</span></td>
+        <td>
+          <div style="color:var(--text);font-weight:600;margin-bottom:4px;">국내 VIP FP 달성률 제고 (31.7% — 월간 페이스 최하위)</div>
+          <div style="font-size:11px;color:var(--text3);">Regist는 증가 중이나 VIP FP 전환율 낮음. 구독 상품 노출 강화 또는 온보딩 CRM 개선 검토.</div>
+        </td>
+        <td><span class="mtag mtag-kr">KR</span></td>
+        <td style="color:var(--text2);">3주</td>
+        <td><span class="kdelta nt" style="display:inline-flex;">VIP FP +50/주</span></td>
+        <td><span class="badge b-yellow">계획</span></td>
+      </tr>
+      <tr>
+        <td><span class="pbadge p2">P2</span></td>
+        <td>
+          <div style="color:var(--text);font-weight:600;margin-bottom:4px;">아시아 Revenue 하락 트렌드 원인 분석 (3월 대비 -20%)</div>
+          <div style="font-size:11px;color:var(--text3);">마켓별 Revenue 분리 추적. 시즌성 vs 콘텐츠 라인업 변화 여부 판단 후 대응 방향 결정.</div>
+        </td>
+        <td><span class="mtag mtag-jp">JP</span> <span class="mtag mtag-tw">TW</span> <span class="mtag mtag-th">TH</span></td>
+        <td style="color:var(--text2);">3주</td>
+        <td><span class="kdelta nt" style="display:inline-flex;">리스크 관리</span></td>
+        <td><span class="badge b-blue">계획</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div><!-- /strategy -->
+
+
+<!-- ═══════════════════════════════════════
+     SECTION · KPI 누적 추이
+═══════════════════════════════════════ -->
+<div id="kpi-trend">
+<div class="sec-label reveal">KPI 누적 추이 · 4월 실적 vs 5월 KPI 페이스 vs 5월 현재</div>
+
+<!-- 컨트롤 -->
+<div style="display:flex;gap:8px;align-items:center;margin-bottom:16px;" class="reveal">
+  <span style="font-size:11px;color:var(--text3);font-family:'Space Mono',monospace;">지표:</span>
+  <button onclick="setKpiMetric('rev',this)" class="kpi-btn kpi-active" style="padding:5px 14px;border-radius:4px;border:1px solid var(--border2);font-size:12px;cursor:pointer;background:#3b6ff0;color:#fff;transition:all .15s;">FP Revenue</button>
+  <button onclick="setKpiMetric('spend',this)" class="kpi-btn" style="padding:5px 14px;border-radius:4px;border:1px solid var(--border2);font-size:12px;cursor:pointer;background:#fff;color:var(--text2);transition:all .15s;">광고비 Spend</button>
+  <div style="width:1px;height:20px;background:var(--border);margin:0 4px;"></div>
+  <span style="font-size:11px;color:var(--text3);font-family:'Space Mono',monospace;">월 경과율:</span>
+  <span style="font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:var(--yellow);">32.26%</span>
+  <span style="font-size:11px;color:var(--text3);">(전일 5/10 기준)</span>
+</div>
+
+<!-- Asia 합산 -->
+<div class="card reveal" style="margin-bottom:14px;">
+  <div class="card-title">
+    🌏 Asia 합산 누적 추이
+    <span class="badge b-blue">실제 일별 데이터</span>
+  </div>
+  <div class="card-sub">4월 실적(회색) · 5월 KPI 페이스(점선) · 5월 실제(실선) · x축 = 1~31일</div>
+  <!-- 상태 칩 -->
+  <div id="kpi-status-asia" style="display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;"></div>
+  <div style="position:relative;height:220px;">
+    <canvas id="kpiAsiaChart"></canvas>
+  </div>
+  <div style="display:flex;gap:16px;margin-top:10px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);"><div style="width:20px;height:2px;background:#94a3b8;"></div>4월 실적</div>
+    <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);"><div style="width:20px;height:0;border-top:2px dashed #3b6ff0;"></div>5월 KPI 페이스</div>
+    <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);"><div style="width:20px;height:2px;background:#3b6ff0;"></div>5월 실제</div>
+  </div>
+</div>
+
+<!-- 언어별 2x2 -->
+<div class="g2 reveal">
+  <div class="card">
+    <div class="card-title">🇯🇵 Japan <span class="badge" style="background:rgba(217,65,65,.1);color:#d94141;border:1px solid rgba(217,65,65,.3);">JP</span></div>
+    <div class="card-sub">4월 실적 vs 5월 KPI 페이스 vs 5월 현재</div>
+    <div id="kpi-status-jp" style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;"></div>
+    <div style="position:relative;height:170px;"><canvas id="kpiJpChart"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-title">🇹🇼 Taiwan <span class="badge" style="background:rgba(196,127,0,.1);color:#c47f00;border:1px solid rgba(196,127,0,.3);">TW</span></div>
+    <div class="card-sub">4월 실적 vs 5월 KPI 페이스 vs 5월 현재</div>
+    <div id="kpi-status-tw" style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;"></div>
+    <div style="position:relative;height:170px;"><canvas id="kpiTwChart"></canvas></div>
+  </div>
+</div>
+<div class="g2 reveal">
+  <div class="card">
+    <div class="card-title">🇹🇭 Thailand <span class="badge" style="background:rgba(14,158,104,.1);color:#0e9e68;border:1px solid rgba(14,158,104,.3);">TH</span></div>
+    <div class="card-sub">4월 실적 vs 5월 KPI 페이스 vs 5월 현재</div>
+    <div id="kpi-status-th" style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;"></div>
+    <div style="position:relative;height:170px;"><canvas id="kpiThChart"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-title">🇰🇷 Korea <span class="badge" style="background:rgba(124,92,219,.1);color:#7c5cdb;border:1px solid rgba(124,92,219,.3);">KR</span></div>
+    <div class="card-sub">4월 실적 vs 5월 KPI 페이스 vs 5월 현재</div>
+    <div id="kpi-status-kr" style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;"></div>
+    <div style="position:relative;height:170px;"><canvas id="kpiKrChart"></canvas></div>
+  </div>
+</div>
+<div style="font-size:10px;color:var(--text3);font-family:'Space Mono',monospace;margin-top:-8px;margin-bottom:24px;" class="reveal">
+  * Asia 합산은 raw(P) 실제 일별 데이터. 언어별은 월간 누적 실적 균등배분 근사치.
+</div>
+
+</div><!-- /kpi-trend -->
+
+</div><!-- /main -->
+
+<!-- ───── FOOTER ───── -->
+<div class="footer">
+  <span>Toomics Global · Marketing Weekly Report v2 · 05/04~05/10, 2026</span>
+  <span>데이터: Google Sheets (raw P / raw ad / raw K_p / raw K_ad) · AI: Claude Sonnet</span>
+  <span>Ctrl+P → PDF 저장 가능</span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script>
+// ── Scroll Reveal ──
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) setTimeout(() => e.target.classList.add('revealed'), i * 50);
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// ── 골든위크 Effi 차트 ──
+const gwCtx = document.getElementById('gwChart').getContext('2d');
+new Chart(gwCtx, {
+  type: 'bar',
+  data: {
+    labels: ['4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7'],
+    datasets: [{
+      label: 'Effi.(P)',
+      data: [106, 109, 131, 103, 81, 87, 112, 144, 104],
+      backgroundColor: [106,109,131,103,81,87,112,144,104].map(v =>
+        v >= 120 ? 'rgba(52,211,153,0.7)' : v >= 100 ? 'rgba(248,113,113,0.55)' : 'rgba(251,191,36,0.55)'
+      ),
+      borderColor: [106,109,131,103,81,87,112,144,104].map(v =>
+        v >= 120 ? 'rgba(52,211,153,1)' : v >= 100 ? 'rgba(248,113,113,0.9)' : 'rgba(251,191,36,0.9)'
+      ),
+      borderWidth: 1,
+      borderRadius: 3,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: '#ffffff', borderColor: '#dde1ee', borderWidth: 1,
+        titleColor: '#1a1d2e', bodyColor: '#4a5270',
+        titleFont: { family: 'Space Mono', size: 10 },
+        bodyFont: { family: 'Space Mono', size: 10 },
+        callbacks: { label: ctx => ` Effi. ${ctx.raw}` }
+      },
+      annotation: { annotations: {
+        baseline: { type: 'line', yMin: 100, yMax: 100, borderColor: 'rgba(255,255,255,0.2)', borderWidth: 1, borderDash: [4,3],
+          label: { content: '기준 100', enabled: true, color: 'rgba(255,255,255,0.4)', font: { size: 9, family: 'Space Mono' }, position: 'end' }
+        }
+      }}
+    },
+    scales: {
+      x: { grid: { color: 'rgba(37,42,58,0.5)' }, ticks: { color: '#4a5270', font: { family: 'Space Mono', size: 9 } } },
+      y: { grid: { color: 'rgba(37,42,58,0.5)' }, ticks: { color: '#4a5270', font: { family: 'Space Mono', size: 9 } }, min: 60, max: 160 }
+    }
+  }
+});
+
+// ── KPI 누적 추이 차트 ──
+const MAY_DAYS = 31;
+const labels31 = Array.from({length:31},(_,i)=>`${i+1}`);
+
+const APR_CUM_SPEND = [9103661,18181056,27121697,36396920,45446530,54429210,63344243,72195028,81019681,89980296,98879445,107598889,116342070,125123352,134067726,142898399,151836066,161069275,170458567,179550339,188658864,197660024,206770666,215923909,224995708,234208240,243021606,251897374,261112626,270076788];
+const APR_CUM_REV   = [7953892,15654695,23032651,30928417,38997265,46776690,54409147,62369003,69649975,77430441,85404730,93074424,100662740,108322710,115209006,122863486,130577914,138359450,146551384,154190706,161736171,169127659,177398125,184784237,192447494,200659123,208278721,215799607,224063018,232150960];
+const MAY_CUM_SPEND = [9494644,19103830,28744286,38352155,47877190,57448485,67016144,76600547,86580135,96284110];
+const MAY_CUM_REV   = [9847026,19146073,27934097,36844259,46278557,56553476,65829287,74487966,83541630,92504891];
+
+const KPI_DATA = {
+  asia: { apr:{spend:270364290,rev:219134673}, may:{spend:287479048,rev:239421380} },
+  JP: { apr_act:{spend:75682044,rev:71001745}, may_kpi:{spend:79050000,rev:68088694}, may_act:{spend:25947324,rev:26063590} },
+  TW: { apr_act:{spend:63409645,rev:54271681}, may_kpi:{spend:72230000,rev:62909570}, may_act:{spend:23767967,rev:22966451} },
+  TH: { apr_act:{spend:39110106,rev:79560219}, may_kpi:{spend:40300000,rev:75978899}, may_act:{spend:13505702,rev:26253854} },
+  KR: { apr_act:{spend:91874992,rev:27317316}, may_kpi:{spend:95899048,rev:32444217}, may_act:{spend:34057546,rev:18299648} },
+};
+
+let kpiMetric = 'rev';
+let kpiCharts = {};
+
+function M(v){ return +(v/1e6).toFixed(2); }
+function fmtM(v){ return `₩${(v/1e6).toFixed(1)}M`; }
+
+function kpiPace(total){ return Array.from({length:31},(_,i)=>M(total/31*(i+1))); }
+function langCum(actTotal, days, totalDays){ return Array.from({length:days},(_,i)=>M(actTotal/days*(i+1))); }
+
+function renderStatusChips(elId, mayKpi, mayAct, color){
+  const pct = mayAct / mayKpi * 100;
+  const pacePct = mayAct / (mayKpi/31*10) * 100;
+  const pc = pacePct>=100?'#0e9e68':pacePct>=90?'#c47f00':'#d94141';
+  document.getElementById(elId).innerHTML = `
+    <div style="padding:6px 12px;background:#f5f6fa;border-radius:5px;border:1px solid var(--border);">
+      <div style="font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:#3b6ff0;">${fmtM(mayKpi)}</div>
+      <div style="font-size:10px;color:var(--text3);">5월 KPI</div>
+    </div>
+    <div style="padding:6px 12px;background:#f5f6fa;border-radius:5px;border:1px solid var(--border);">
+      <div style="font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:var(--text);">${fmtM(mayAct)}</div>
+      <div style="font-size:10px;color:var(--text3);">현재(~5/10)</div>
+    </div>
+    <div style="padding:6px 12px;background:#f5f6fa;border-radius:5px;border:1px solid var(--border);">
+      <div style="font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:${pc};">${pacePct.toFixed(1)}%</div>
+      <div style="font-size:10px;color:var(--text3);">페이스 vs KPI</div>
+    </div>
+  `;
+}
+
+const kpiTooltipDefaults = {
+  backgroundColor:'#fff', borderColor:'#dde1ee', borderWidth:1,
+  titleColor:'#1a1d2e', bodyColor:'#4a5270',
+  titleFont:{family:'Space Mono',size:9}, bodyFont:{family:'Space Mono',size:9}, padding:8,
+  callbacks:{ label: ctx => ` ${ctx.dataset.label}: ₩${ctx.raw}M` }
+};
+const kpiScaleDefaults = (maxVal) => ({
+  x:{ grid:{color:'rgba(0,0,0,0.04)'}, ticks:{color:'#aab0c8',font:{family:'Space Mono',size:9},maxTicksLimit:8} },
+  y:{ grid:{color:'rgba(0,0,0,0.04)'}, ticks:{color:'#aab0c8',font:{family:'Space Mono',size:9},callback:v=>`₩${v}M`}, suggestedMax: maxVal*1.05 }
+});
+
+function buildKpiCharts(){
+  Object.values(kpiCharts).forEach(c=>c.destroy());
+  kpiCharts = {};
+  const m = kpiMetric;
+
+  // Asia 합산
+  const asiaAprData = m==='rev'? APR_CUM_REV.map(M) : APR_CUM_SPEND.map(M);
+  const asiaMayData = m==='rev'? MAY_CUM_REV.map(M) : MAY_CUM_SPEND.map(M);
+  const asiaKpi = KPI_DATA.asia.may[m];
+  const asiaAct = asiaMayData[asiaMayData.length-1]*1e6;
+  renderStatusChips('kpi-status-asia', asiaKpi, asiaAct, '#3b6ff0');
+
+  const maxAsia = Math.max(...asiaAprData, ...kpiPace(asiaKpi));
+  kpiCharts.asia = new Chart(document.getElementById('kpiAsiaChart'),{
+    type:'line',
+    data:{ labels:labels31, datasets:[
+      { label:'4월 실적', data:[...asiaAprData,...Array(1).fill(null)], borderColor:'#94a3b8', borderWidth:2, pointRadius:0, pointHoverRadius:3, tension:0.3, fill:false },
+      { label:'5월 KPI 페이스', data:kpiPace(asiaKpi), borderColor:'#3b6ff0', borderDash:[5,3], borderWidth:1.5, pointRadius:0, pointHoverRadius:3, tension:0.3, fill:false },
+      { label:'5월 실제', data:[...asiaMayData,...Array(MAY_DAYS-asiaMayData.length).fill(null)], borderColor:'#3b6ff0', borderWidth:2.5, backgroundColor:'rgba(59,111,240,0.07)', pointRadius:[...Array(asiaMayData.length-1).fill(0),4,...Array(MAY_DAYS-asiaMayData.length).fill(0)], pointHoverRadius:4, tension:0.3, fill:true },
+    ]},
+    options:{ responsive:true, maintainAspectRatio:false, interaction:{mode:'index',intersect:false},
+      plugins:{ legend:{display:false}, tooltip:kpiTooltipDefaults },
+      scales: kpiScaleDefaults(maxAsia)
+    }
+  });
+
+  // 언어별
+  const langs = [
+    {id:'kpiJpChart', statusId:'kpi-status-jp', key:'JP', color:'#d94141'},
+    {id:'kpiTwChart', statusId:'kpi-status-tw', key:'TW', color:'#c47f00'},
+    {id:'kpiThChart', statusId:'kpi-status-th', key:'TH', color:'#0e9e68'},
+    {id:'kpiKrChart', statusId:'kpi-status-kr', key:'KR', color:'#7c5cdb'},
+  ];
+  langs.forEach(cfg=>{
+    const d = KPI_DATA[cfg.key];
+    const aprTotal = d.apr_act[m];
+    const mayKpi = d.may_kpi[m];
+    const mayActTotal = d.may_act[m];
+    const aprCum = langCum(aprTotal, 30, 30);
+    const mayCum = langCum(mayActTotal, 10, 31);
+    renderStatusChips(cfg.statusId, mayKpi, mayActTotal, cfg.color);
+    const maxVal = Math.max(...aprCum, ...kpiPace(mayKpi));
+    kpiCharts[cfg.key] = new Chart(document.getElementById(cfg.id),{
+      type:'line',
+      data:{ labels:labels31, datasets:[
+        { label:'4월 실적', data:[...aprCum,...Array(1).fill(null)], borderColor:'#94a3b8', borderWidth:1.5, pointRadius:0, pointHoverRadius:3, tension:0.3, fill:false },
+        { label:'5월 KPI 페이스', data:kpiPace(mayKpi), borderColor:cfg.color, borderDash:[5,3], borderWidth:1.5, pointRadius:0, pointHoverRadius:3, tension:0.3, fill:false },
+        { label:'5월 실제', data:[...mayCum,...Array(MAY_DAYS-mayCum.length).fill(null)], borderColor:cfg.color, borderWidth:2, backgroundColor:cfg.color+'12', pointRadius:[...Array(mayCum.length-1).fill(0),3,...Array(MAY_DAYS-mayCum.length).fill(0)], pointHoverRadius:3, tension:0.3, fill:true },
+      ]},
+      options:{ responsive:true, maintainAspectRatio:false, interaction:{mode:'index',intersect:false},
+        plugins:{ legend:{display:false}, tooltip:kpiTooltipDefaults },
+        scales: kpiScaleDefaults(maxVal)
+      }
+    });
+  });
+}
+
+function setKpiMetric(m, btn){
+  kpiMetric = m;
+  document.querySelectorAll('.kpi-btn').forEach(b=>{ b.style.background='#fff'; b.style.color='var(--text2)'; b.style.borderColor='var(--border2)'; });
+  btn.style.background='#3b6ff0'; btn.style.color='#fff'; btn.style.borderColor='#3b6ff0';
+  buildKpiCharts();
+}
+
+buildKpiCharts();
+
+// ── Nav active on scroll ──
+const sections = document.querySelectorAll('[id]');
+const navLinks = document.querySelectorAll('.nav a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+  });
+});
+</script>
+</body>
+</html>
